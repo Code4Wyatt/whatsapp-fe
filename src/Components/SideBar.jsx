@@ -1,4 +1,4 @@
-const SideBar = async ()=>{
+const SideBar =  ()=>{
      return (console.log(`SideBar`))
 }
      export default SideBar

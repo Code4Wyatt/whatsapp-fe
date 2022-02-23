@@ -1,4 +1,4 @@
-const HMFooter = async ()=>{
-     return (console.log(`HMFooter`))
+const HMFooter = ()=>{
+     return (<h1>send message here</h1>)
 }
      export default HMFooter
