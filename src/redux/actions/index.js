@@ -15,9 +15,14 @@
 //     (i.e. store.chats.list[action.payload.chatId])
 // if you are the sender of the message, (i.e. message.sender === store.userInfo._id) then you should  also store.socket.emit the appropriate event (check the Socket.io guidelines)
 export const ACTIONS = {
-    USER_LOGIN: 'USER_LOGIN'
+    USER_LOGIN: 'USER_LOGIN',
+    SET_USER_INFO: 'SET_USER_INFO',
+    SET_ACTIVE_CHAT: 'SET_ACTIVE_CHAT',
+    SET_HISTORY: 'SET_HISTORY',
+    NEW_MESSAGE: 'NEW_MESSAGE',
+    INIT_SOCKET: 'INIT_SOCKET'
 }
 
 export const userLoginAction = () => ({
     type: ACTIONS.USER_LOGIN,
-}) 
+})

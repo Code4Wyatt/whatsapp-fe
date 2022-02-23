@@ -1,22 +1,21 @@
-import { createStore, composeStore } from 'redux';
+import { applyMiddleware, createStore, compose, applyMiddleware } from 'redux';
 import chatReducer from '../reducers/chatReducer.js';
-import storage from 'redux-persist/lib/storage';
+import thunk from 'redux-thunk'
 
-const composeThatAlwaysWorks = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+const composeThatWorks = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 export const initialState = {
-    chat: {
 
+    user: {
+        isLogged: false,
+        currentUser: null
     },
-    user: {},
-    message: {}
+    chat: {
+        selected: null,
+        list: []
+    }
 
 
 }
 
-export let configureStore = createStore(
-
-    initialState,
-
-
-)
+export let configureStore = createStore(chatReducer, initialState, composeThatWorks(applyMiddleware(thunk)))
