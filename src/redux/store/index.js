@@ -7,12 +7,12 @@ const composeThatWorks = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 export const initialState = {
 
     user: {
-        isLogged: false,
+        isLoggedIn: false,
         currentUser: null
     },
     chat: {
         selected: null,
-        list: []
+        chatList: []
     }
 
 

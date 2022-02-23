@@ -26,3 +26,23 @@ export const ACTIONS = {
 export const userLoginAction = () => ({
     type: ACTIONS.USER_LOGIN,
 })
+
+export const setUserInfo = (userInfo) => ({
+    type: ACTIONS.SET_USER_INFO,
+    payload: userInfo
+})
+
+export const setActiveChat = (chatId) => ({
+    type: ACTIONS.SET_ACTIVE_CHAT,
+    payload: chatId
+})
+
+export const setHistory = (chatId, history) => ({
+    type: ACTIONS.SET_HISTORY,
+    payload: { chatId, history }
+})
+
+export const setNewMessage = (chatId, message) => ({
+    type: ACTIONS.NEW_MESSAGE,
+    payload: { chatId, message }
+})
