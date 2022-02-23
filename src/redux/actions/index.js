@@ -14,3 +14,10 @@
 // appends the message to the history of the chat with _id equal to chatId
 //     (i.e. store.chats.list[action.payload.chatId])
 // if you are the sender of the message, (i.e. message.sender === store.userInfo._id) then you should  also store.socket.emit the appropriate event (check the Socket.io guidelines)
+export const ACTIONS = {
+    USER_LOGIN: 'USER_LOGIN'
+}
+
+export const userLoginAction = () => ({
+    type: ACTIONS.USER_LOGIN,
+}) 

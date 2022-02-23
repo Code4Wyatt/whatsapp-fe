@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+ .sidebar-Home2-images{
+   width: 70px;
+   border-radius: 45%;
+   padding-top: 10px;
+ }
+ .date{
+   position: absolute;
+   top: 20%;
+   left: 86%;
+
+ }
+
