@@ -7,10 +7,13 @@ import HMFooter  from './HMFooter'
 const MessageSection = () => {
     return (
         <Container>
-            <Row>
-                <Col>
+            <Row className="flex-column justify-content-between">
+                <Col >
                     <HMHeader />
-                    <HystoryMessage />
+                    </Col>
+                    <Col>
+                    <HystoryMessage /></Col>
+                    <Col>
                     <HMFooter />
                 </Col>
             </Row>
