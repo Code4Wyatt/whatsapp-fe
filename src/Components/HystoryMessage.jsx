@@ -10,8 +10,6 @@ const Hystory =  ()=>{
                     <HMSingleMessage />
                     </Col>
                </Row>
-
-
           </Container>
           
      )
