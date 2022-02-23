@@ -12,11 +12,11 @@ const userReducer = (state = initialState.user, action) => {
         case ACTIONS.SET_USER_INFO:
             return {
                 ...state,
-                userInfo: action.payload
+                currentUser: action.payload
             }
         case ACTIONS.SET_ACTIVE_CHAT:
             return {
-                selected: action.payload
+                chatList: action.payload
             }
         case ACTIONS.SET_HISTORY:
             return {
@@ -26,7 +26,11 @@ const userReducer = (state = initialState.user, action) => {
             return {
                 selected: action.payload
             }
-
+        case ACTIONS.ADD_CHAT:
+            return {
+                ...state,
+                chatList: action.payload
+            }
 
         default:
             return state

@@ -1,4 +1,4 @@
-import { applyMiddleware, createStore, compose, applyMiddleware } from 'redux';
+import { applyMiddleware, createStore, compose } from 'redux';
 import chatReducer from '../reducers/chatReducer.js';
 import thunk from 'redux-thunk'
 

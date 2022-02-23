@@ -20,6 +20,7 @@ export const ACTIONS = {
     SET_ACTIVE_CHAT: 'SET_ACTIVE_CHAT',
     SET_HISTORY: 'SET_HISTORY',
     NEW_MESSAGE: 'NEW_MESSAGE',
+    NEW_CHAT: 'NEW_CHAT',
     INIT_SOCKET: 'INIT_SOCKET'
 }
 
@@ -45,4 +46,9 @@ export const setHistory = (chatId, history) => ({
 export const setNewMessage = (chatId, message) => ({
     type: ACTIONS.NEW_MESSAGE,
     payload: { chatId, message }
+})
+
+export const addNewChat = (chatId) => ({
+    type: ACTIONS.NEW_CHAT,
+    payload: { chatId }
 })
