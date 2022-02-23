@@ -1,4 +1,4 @@
 const SideBarHeader = ()=>{
-     return (console.log(`SideBarHeader`))
+     return ( <h1>SideBarHeader</h1>)
 }
      export default SideBarHeader
