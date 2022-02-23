@@ -1,12 +1,15 @@
 import React from 'react';
-
 import './App.css';
+import SidebarChat from './Components/SideBarChat';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { BrowserRouter, Router, Routes } from 'react-router-dom';
+import Login from './Components/Login';
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Home page</h1>
-    </div>
+  return (<>
+  
+    <SidebarChat />
+  </>
   );
 }
 
