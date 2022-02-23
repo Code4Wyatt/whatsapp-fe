@@ -30,7 +30,7 @@ updateChat()
         <Container >
             <Row>{ currentUser && (
                 <Col xs={5}>
-                    <FormControl className="mb-3" type="search" placeholder="search" value={search} onChange={e=>(e.target.value)}/>
+                    <FormControl className="mb-3" type="search" placeholder="search" value={search} onChange={e=>setSearch(e.target.value)}/>
                    {chats.map(c=><SingleChat c={chats}/>)}
                 </Col>
             )}
