@@ -10,7 +10,7 @@ const MessageSection = () => {
             <Row>
                 <Col>
                     <HMHeader />
-                    <HystoryMessage />
+                    <HystoryMessage style={{minHeight:"80vh"}}/>
                     <HMFooter />
                 </Col>
             </Row>

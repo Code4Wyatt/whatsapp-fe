@@ -8,14 +8,14 @@ import './App.css';
 const App = () => {
 return (
   <BrowserRouter>
-    <Container>
+    {/* <Container>
       <Row>
-        <Col xs={12} className="text-center"><h1>Login Page</h1>
+        <Col xs={12} className="text-center">
           <Button>
             <Link to="/home">enter</Link>
           </Button></Col>
       </Row>
-    </Container>
+    </Container> */}
     <Routes>
       <Route path="/home" element={<HomePage />} />
       {/* <Route path="/*" element={"This page doesn't exist"} /> */}

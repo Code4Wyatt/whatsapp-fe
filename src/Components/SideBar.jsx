@@ -11,7 +11,7 @@ const SideBar =  ()=>{
           <Col xs={12}>
                <SideBarHeader />
                <SideBarAlert />
-               <SideBarChat />
+               {/* <SideBarChat /> */}
           </Col>
      </Row>
 </Container>

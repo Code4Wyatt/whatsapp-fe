@@ -5,12 +5,12 @@ import SideBar from '../Components/SideBar'
 const HomePage = () => {
 
      return (
-          <Container>
+          <Container fluid style={{marginTop:"1rem"}}>
                <Row>
-                    <Col xs={12} md={5} >
+                    <Col xs={12} md={3} >
                          <SideBar />
                     </Col>
-                    <Col xs={12} md={7} >
+                    <Col xs={12} md={9} >
                          <MessageSection />
                     </Col>
                </Row>
