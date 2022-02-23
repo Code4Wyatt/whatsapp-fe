@@ -4,7 +4,7 @@ import {Container, Row, Col} from 'react-bootstrap'
 
 const Hystory =  ()=>{
      return (
-          <Container style={{backgroundColor:"beige"}}>
+          <Container style={{backgroundColor:"beige", paddingTop:"2rem"}}>
                <Row>
                     <Col>
                     <HMSingleMessage />
