@@ -16,3 +16,9 @@
 .App-link {
     color: #61dafb;
 }
+.profile_img{
+    max-width: 200px;
+    height: 170px;
+    border-radius: 50%;
+    margin-left: 35px;
+}

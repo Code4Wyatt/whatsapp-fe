@@ -19,7 +19,34 @@ code {
  .date{
    position: absolute;
    top: 20%;
-   left: 86%;
-
+   left: 83%;
  }
+.nav_profile{
+  background-color: #7d7373;
+  height: 100px;
+}
+.nav_text {
+  position: absolute;
+  top: 19%;
+  left: 2%;
+  font-size: 20px;
+  font-weight: 500;
+}
+ p{
+   font-size: 18px;
+
+}
+.icons{
+  position: absolute;
+  top: 54%;
+  left: 85%;
+  font-size: 16px;
+}
+.icon2nd{
+  position: absolute;
+  top: 91%;
+  left: 85%;
+  font-size: 16px;
+}
+
 

@@ -3,7 +3,7 @@ import { ListGroup } from "react-bootstrap"
 import {BsCheckAll} from 'react-icons/bs'
 
 
-const SingleChat = async ()=>{
+const SingleChat =  ()=>{
      return (<>
      
      <ListGroup>
@@ -15,9 +15,9 @@ const SingleChat = async ()=>{
                                 />
                                 <div className="">
                                     <p className="text-dark">
-                                        <strong className="p-3 "> Dominic McGregor</strong>
+                                        <strong className="p-3 ">Dominic McGregor</strong>
                                     </p>
-                                    <BsCheckAll size={20} className="ml-2"/> 
+                                    <BsCheckAll size={20} className="ml-5"/> 
                                     <small className="m-2">Assalomu Alaykum</small>
                                 </div>
                             </div>

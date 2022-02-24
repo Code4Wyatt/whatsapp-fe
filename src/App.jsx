@@ -1,13 +1,13 @@
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from './pages/HomePage.jsx'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 
 import './App.css';
 import SidebarChat from './Components/SideBarChat';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { BrowserRouter, Router, Routes } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Router, Routes } from 'react-router-dom';
 import Login from './Components/Login';
+import { Profile } from './Components/Profile.jsx';
 
 const App = () => {
 return (
@@ -21,10 +21,14 @@ return (
       </Row>
     </Container>
     <Routes>
+      <Route path="/profile" element={<Profile />} />
       <Route path="/home" element={<HomePage />} />
+
+      
       {/* <Route path="/*" element={"This page doesn't exist"} /> */}
     </Routes>
   </BrowserRouter>
+  
 
 )
 }
