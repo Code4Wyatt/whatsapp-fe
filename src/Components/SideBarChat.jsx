@@ -6,7 +6,7 @@ import {addNewChat} from '../redux/actions'
 
 
 
-const SideBarChat = () => {
+const SideBarChat = async() => {
 
 const dispatch = useDispatch()
 const [search, setSearch] = useState('')
@@ -16,8 +16,8 @@ const chats = useSelector(state => state.chat.chatList)
 
 const updateChat = ()=>{
     if(currentUser){
-const singleChat = currentUser.chats.length === 0 ?[]:(currentUser.chats.map(c=>c.includes(search.toLowerCase())))
-dispatch(addNewChat(singleChat[0]|| singleChat))
+// const singleChat = currentUser.chats.length === 0 ?[]:(currentUser.chats.map(c=>c.includes(search.toLowerCase())))
+// // dispatch(addNewChat(singleChat[0]|| singleChat))
     }}
 
 useEffect(()=>{

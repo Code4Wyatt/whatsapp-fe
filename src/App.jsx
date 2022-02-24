@@ -1,21 +1,33 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from './pages/HomePage.jsx'
-import { BrowserRouter, Routes, Route} from 'react-router-dom'
-import './App.css';
-import PageNotFound from './pages/PageNotFound'
-import Login from './pages/Login'
 
+import './App.css';
+import SidebarChat from './Components/SideBarChat';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { BrowserRouter, Link, Route, Router, Routes } from 'react-router-dom';
+import Login from './Components/Login';
+import { Profile } from './Components/Profile.jsx';
 
 const App = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/account" element={<HomePage />} />
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
-    </BrowserRouter>
+return (
+  <BrowserRouter>
+    <Container>
+      <Row>
+        <Col xs={12} className="text-center"><h1>Login Page</h1>
+          <Button>
+            <Link to="/home">enter</Link>
+          </Button></Col>
+      </Row>
+    </Container>
+    <Routes>
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/home" element={<HomePage />} />
+
+      
+      {/* <Route path="/*" element={"This page doesn't exist"} /> */}
+    </Routes>
+  </BrowserRouter>
+  
 
   )
 }

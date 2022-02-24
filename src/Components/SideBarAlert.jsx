@@ -1,4 +1,8 @@
 const SideBarAlert =  ()=>{
-     return ( <h1>sidebar alert</h1>)
+     return (
+          <>
+          
+          </>
+     )
 }
      export default SideBarAlert
