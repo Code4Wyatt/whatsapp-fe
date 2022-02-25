@@ -7,7 +7,7 @@ const userReducer = (state = initialState.user, action) => {
         case ACTIONS.USER_LOGIN:
             return {
                 ...state,
-                isLoggedIn: true
+                isLoggedIn: true,
             }
         case ACTIONS.SET_USER_INFO:
             return {

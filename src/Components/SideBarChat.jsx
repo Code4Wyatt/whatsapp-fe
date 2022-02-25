@@ -3,10 +3,10 @@ import SingleChat from "./SingleChat"
 import {useSelector, useDispatch} from 'react-redux'
 import {useEffect, useState} from 'react'
 import {addNewChat} from '../redux/actions'
-import { useSelector } from 'react-redux'
 
 
-const SideBarChat = async() => {
+
+const SideBarChat = () => {
 
 const dispatch = useDispatch()
 const [search, setSearch] = useState('')

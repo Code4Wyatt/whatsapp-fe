@@ -20,8 +20,8 @@ const SideBarHeader = () => {
                                    <Modal.Title className='mx-3' >
                                         <img className='profile_img' alt="" src={currentUser.avatar} />
                                         <div className='name_space mt-5'>
-                                             <p className='mb-4 ' >Name</p>
-                                             <h3>Asadbek</h3> <BsFillPencilFill className='icons' />
+                                             <p className='mb-4'>Your name  {currentUser.username}</p>
+                                             <BsFillPencilFill className='icons' />
                                         </div>
                                    </Modal.Title>
                                    <br />
@@ -35,7 +35,7 @@ const SideBarHeader = () => {
                               </Modal.Body>
 
                               <Modal.Title>
-                                   <p className='m-4'>Description</p>
+                                   <p className='m-4'>Profile</p>
                                    <BsFillPencilFill className='icon2nd' />
                               </Modal.Title>
 
