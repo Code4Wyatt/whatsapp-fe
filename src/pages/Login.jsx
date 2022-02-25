@@ -42,10 +42,9 @@ const Login =()=> {
 
 
         try {
-            const res = await fetch('http://localhost/user/login', {
+            const res = await fetch(`${process.env.REACT_APP_BE_URL}/user/login`, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json', 
-                'Authorization': 'credential' 
+                headers: { 'Content-Type': 'application/json'
             },
                 body: JSON.stringify({ userCredentials })
             })
