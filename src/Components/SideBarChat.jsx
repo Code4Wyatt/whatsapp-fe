@@ -3,7 +3,7 @@ import SingleChat from "./SingleChat"
 import {useSelector, useDispatch} from 'react-redux'
 import {useEffect, useState} from 'react'
 import {addNewChat} from '../redux/actions'
-
+import { useSelector } from 'react-redux'
 
 
 const SideBarChat = async() => {
@@ -30,10 +30,10 @@ updateChat()
 
     return (
         <Container >
-            <Row>{ currentUser && (
+            <Row>{ currentUser &&(
                 <Col xs={5}>
                     <FormControl className="mb-3" type="search" placeholder="search" value={search} onChange={e=>setSearch(e.target.value)}/>
-                   {chats.map(c=><SingleChat c={chats}/>)}
+                   {chats.chatList.map(c=><SingleChat c={chats}/>)}
                 </Col>
             )}
             </Row>
