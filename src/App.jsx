@@ -4,9 +4,9 @@ import PageNotFound from './pages/PageNotFound'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Login from './Components/Login';
+import Login from './pages/Login.jsx';
 import PrivateRoute from './Components/PrivateRoute.jsx';
-import Register from './Components/Register'
+import Register from './pages/Register.jsx'
 
 
 
