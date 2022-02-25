@@ -1,21 +1,22 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from './pages/HomePage.jsx'
-
+import PageNotFound from './pages/PageNotFound'
 import './App.css';
-import SidebarChat from './Components/SideBarChat';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { BrowserRouter, Link, Route, Router, Routes } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import Login from './Components/Login';
-import { Profile } from './Components/Profile.jsx';
+import PrivateRoute from './Components/PrivateRoute.jsx';
+import Register from './Components/Register'
+
 
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<PrivateRoute><HomePage /></PrivateRoute>} />
         <Route path="/login" element={<Login />} />
-        {/* <Route path="/account" element={<HomePage />} /> */}
+        <Route path="/register" element={<Register />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
