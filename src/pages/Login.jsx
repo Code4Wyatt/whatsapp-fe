@@ -47,14 +47,15 @@ const Login =()=> {
             },
                 body: JSON.stringify({ userCredentials })
             })
-            console.log("res from login", res)
+            console.log("res from login", await res.json())
             if (res.ok) {
                 //res.userId
+
                 dispatch(userLoginAction())
                 navigate('/')
             } else {
                 setInvalidCredentials(true)
-                console.log("invalid detail")
+                alert("please provide right credentials!")
             }
         } catch (error) {
             console.log(error)

@@ -5,12 +5,11 @@ import {setUserInfo} from '../redux/actions'
 
 export default function PrivateRoute({children}){
     const dispatch = useDispatch()
-    const isLogged = useSelector(state => state.user.isLoggedIn)
-    const currentUser = useSelector(state => state.user.currentUser)
+    const isLogged = useSelector(state => state.user?.isLoggedIn)
+    const currentUser = useSelector(state => state.user?.currentUser)
     const userId = currentUser?._id
     const URL = process.env.REACT_APP_BE_URL
     const getMe = async () =>{
-
         
         if (userId) try {
             const res = await fetch (`${URL}/${userId}`)
