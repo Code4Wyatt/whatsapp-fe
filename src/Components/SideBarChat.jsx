@@ -16,8 +16,10 @@ const chats = useSelector(state => state.chat.chatList)
 
 const updateChat = ()=>{
     if(currentUser){
-// const singleChat = currentUser.chats.length === 0 ?[]:(currentUser.chats.map(c=>c.includes(search.toLowerCase())))
-// // dispatch(addNewChat(singleChat[0]|| singleChat))
+const singleChat = currentUser.chats.length === 0 ?[]:(currentUser.chats.map(c=>c.includes(search.toLowerCase())))
+
+console.log(singleChat)
+dispatch(addNewChat(singleChat[0]|| singleChat))
     }}
 
 useEffect(()=>{

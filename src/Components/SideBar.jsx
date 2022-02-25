@@ -8,13 +8,14 @@ import {useSelector} from 'react-redux'
 const SideBar =  ()=>{
 
      return (
-<Container>
-     <Row>
+<Container className="flex-column justify-content-between">
+     <Row >
           <Col xs={12}>
                <SideBarHeader />
-               <SideBarAlert />
-               {/* <SideBarChat /> */}
-          </Col>
+           </Col >    
+           <Col xs={12}><SideBarAlert /></Col>
+            <Col xs={12}><SideBarChat /></Col>   
+          
      </Row>
 </Container>
 
