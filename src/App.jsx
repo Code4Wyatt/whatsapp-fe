@@ -3,7 +3,7 @@ import HomePage from './pages/HomePage.jsx'
 import PageNotFound from './pages/PageNotFound'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './Components/Login';
 import PrivateRoute from './Components/PrivateRoute.jsx';
 import Register from './Components/Register'
