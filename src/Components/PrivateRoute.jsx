@@ -7,10 +7,12 @@ export default function PrivateRoute({children}){
     const dispatch = useDispatch()
     const isLogged = useSelector(state => state.user.isLoggedIn)
     const currentUser = useSelector(state => state.user.currentUser)
-    const userId = currentUser.id
+    const userId = currentUser?._id
     const URL = process.env.REACT_APP_BE_URL
     const getMe = async () =>{
-        try {
+
+        
+        if (userId) try {
             const res = await fetch (`${URL}/${userId}`)
             if(res.ok){
                 console.log(res)

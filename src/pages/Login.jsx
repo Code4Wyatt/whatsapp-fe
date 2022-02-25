@@ -40,15 +40,14 @@ const Login =()=> {
         if (!userCredentials.password) setLoginError(errors => ({ ...errors, password: true }))
         if (!userCredentials.password || !userCredentials.email) setUserError(true )
 
-
         try {
-            const res = await fetch(`${process.env.REACT_APP_BE_URL}/user/login`, {
+            const res = await fetch(`${process.env.REACT_APP_BE_URL}/users/login`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json'
             },
                 body: JSON.stringify({ userCredentials })
             })
-            console.log(res)
+            console.log("res from login", res)
             if (res.ok) {
                 //res.userId
                 dispatch(userLoginAction())
