@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Col, Jumbotron, Modal, Nav, Row } from 'react-bootstrap'
+import { Card, Col, Modal, Nav, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { BsArrowLeftCircle, BsFillPencilFill } from 'react-icons/bs'
 
