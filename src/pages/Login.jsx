@@ -45,7 +45,8 @@ const Login =()=> {
             const res = await fetch('http://localhost/user/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', 
-                'Authorization': 'credential' },
+                'Authorization': 'credential' 
+            },
                 body: JSON.stringify({ userCredentials })
             })
             console.log(res)
@@ -87,13 +88,13 @@ const Login =()=> {
                     placeholder="password"
                     onChange={e => handleInput('password', e.target.value)}
                 />
-                <Button className='btn btn-primary'
+                <input className='btn btn-primary'
                     type="submit"
                     variant="contained"
                     style={{ margin: "1rem 0" }}
-                >
-                    Login
-                </Button>
+                   value="Login"                 >
+                    
+                </input>
 <a href="http://localhost:3001/users/googleLogin" style={{marginLeft: "1rem"}}><FcGoogle />Login with Google</a>
             </Form>
                             
