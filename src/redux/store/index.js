@@ -1,5 +1,5 @@
 import { applyMiddleware, createStore, compose } from 'redux';
-import chatReducer from '../reducers/chatReducer.js';
+import userReducer from '../reducers/indexReducer.js';
 import thunk from 'redux-thunk'
 
 const composeThatWorks = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
@@ -18,4 +18,4 @@ export const initialState = {
 
 }
 
-export let configureStore = createStore(chatReducer, initialState, composeThatWorks(applyMiddleware(thunk)))
+export let store = createStore(userReducer, initialState, composeThatWorks(applyMiddleware(thunk)))
