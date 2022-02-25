@@ -10,7 +10,7 @@ const HMHeader =  ()=>{
      
      return (
      <Container>
-          <Row classname="d-flex">
+          <Row className="d-flex">
                <Col xs={2} >
                     <img src="https://picsum.photos/50" alt="avatar" style={{borderRadius:"50%"}}/>
                </Col>
