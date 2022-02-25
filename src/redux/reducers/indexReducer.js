@@ -1,6 +1,6 @@
 import { AnyAction } from "redux"
 import { ACTIONS } from "../actions/index.js"
-import { initialState } from "../store"
+import { initialState } from "../store/index.js"
 
 const userReducer = (state = initialState.user, action) => {
     switch (action.type) {
