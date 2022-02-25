@@ -9,7 +9,7 @@ const HomePage = () => {
           <Container fluid style={{marginTop:"1rem"}}>
                <Row>
                     <Col xs={12} md={5} >
-                         <h2>Chat section</h2>
+                         
                          <SingleChat />
                     </Col>
                     <Col xs={12} md={9} >
