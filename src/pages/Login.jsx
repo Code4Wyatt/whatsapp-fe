@@ -1,8 +1,8 @@
-
+import {FcGoogle} from 'react-icons/fc'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { Button, Container, Form, FormControl, Alert } from 'react-bootstrap'
-import { useDispatch, Provider } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { userLoginAction } from '../redux/actions'
 
 const Login =()=> {
@@ -42,13 +42,15 @@ const Login =()=> {
 
 
         try {
-            const res = await fetch('/user/login', {
+            const res = await fetch('http://localhost/user/login', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'Authorization': 'credential' },
+                headers: { 'Content-Type': 'application/json', 
+                'Authorization': 'credential' },
                 body: JSON.stringify({ userCredentials })
             })
             console.log(res)
             if (res.ok) {
+                //res.userId
                 dispatch(userLoginAction())
                 navigate('/')
             } else {
@@ -66,21 +68,23 @@ const Login =()=> {
         <Container style={{ minHeight: '98vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             {userError && <Alert variant="alert">Please enter credentials</Alert>}
             {invalidCredential && <Alert variant="warning">Invalid credentials</Alert>}
-
+            
+            
+            <h2 style={{marginRight:'2rem', color:'green', fontWeight:'bold'}}>Whatsapp Login</h2>
             
             <Form onSubmit={handleSubmit}>
                 <FormControl
                     type='email'
                     style={{ margin: "1rem 0" }}
                     value={userCredentials.email}
-                    placeholder='insert your email'
+                    placeholder='email'
                     onChange={(e) => handleInput('email', e.target.value)}
                 />
                 <FormControl
                     type="password"
                     style={{ margin: "1rem 0" }}
                     value={userCredentials.password}
-                    placeholder="insert your password"
+                    placeholder="password"
                     onChange={e => handleInput('password', e.target.value)}
                 />
                 <Button className='btn btn-primary'
@@ -90,15 +94,10 @@ const Login =()=> {
                 >
                     Login
                 </Button>
-
+<a href="http://localhost:3001/users/googleLogin" style={{marginLeft: "1rem"}}><FcGoogle />Login with Google</a>
             </Form>
-            <Button className='btn btn-primary'
-                type="submit"
-                variant="link"
-                style={{ margin: "1rem 0" }}
-            >
-                Create Account
-            </Button>
+                            
+            
         </Container>
     )
 }
